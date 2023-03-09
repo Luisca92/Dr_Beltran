@@ -36,7 +36,7 @@
         <div style="display: flex; flex-direction: column; align-items: center;">
           <h2 style="margin-bottom: 30px;">Get in Touch!</h2>
           <div style="max-width: 500px; width: 100%;">
-            <form method="POST" action="https://formspree.io/f/lcbeltran92@gmail.com">
+            <form method="POST" action="https://formspree.io/f/xpzelabq">
               <div style="display: flex; flex-direction: column;">
                 <div style="margin-bottom: 15px;">
                   <label for="name" style="display: block; margin-bottom: 5px; font-size: 16px;">First Name:</label>
@@ -63,24 +63,25 @@
       </section>
       
       <script>
-        $(document).ready(function() {
-          $("#contact-form").submit(function(event) {
-            event.preventDefault();
-            $.ajax({
-              url: $(this).attr("action"),
-              method: "POST",
-              data: $(this).serialize(),
-              dataType: "json",
-              success: function(data) {
-                $("#success-message").css("display", "block");
-              },
-              error: function() {
-                alert("Error submitting form.");
-              }
-            });
+      $(document).ready(function() {
+        $("form").submit(function(event) {
+          event.preventDefault();
+          $.ajax({
+            url: $(this).attr("action"),
+            method: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(data) {
+              $("#success-message").css("display", "block");
+            },
+            error: function() {
+              alert("Error submitting form.");
+            }
           });
         });
+      });
       </script>
+      
       
     </main>
     <footer>
