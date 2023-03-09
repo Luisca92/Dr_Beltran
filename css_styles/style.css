@@ -166,7 +166,7 @@ header {
   }
 
   .cont {
-    background-image: url("contact-photo.jpg");
+    background-image: url("Images/contact-photo.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
