@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Beltrán</title>
+  <link rel="stylesheet" href="css_styles/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js_styles/ebird-table.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo"></div>
+            <h1 style="margin-left: 0;">Dr. Luis Carlos Beltrán</h1>          
+          <nav>
+            <ul class="navigation" style="padding-left: 200px;">
+              <li><a href="Index.html" class="active">Home</a></li>
+              <li><a href="Research.html">Research</a></li>
+              <li><a href="CV.html">CV</a></li>
+              <li><a href="TOF.html">Tree of Life</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+      
+  <main>
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1></h1>
+      </div>
+    </section>
+
+    <section id="research" class="research" style="padding-bottom: 0px;">
+        <div class="research-container">
+          <div class="research-image">
+            <img src="research-photo.jpg" alt="My research image" style="padding-right: 20px;">
+          </div>
+          <div class="research-text">
+            <h2>The Researcher</h2>
+            <p> I got my BA in Biology & Environmental Studies from Lake Forest College (2011-15) and my PhD from the University of Illinois, Chicago (2016-21), working with Dr. Henry F. Howe on how initial tree species composition influences the recovery of biodiversity, forest structure, and ecological function in a tropical restoration experiment.
+            I then moved back to my home country of Colombia for my postdoctoral training with Dr. Lilia Roa-Fuentes, working on a forest chronosequence study in Caquetá as well as continuing studies from Los Tuxtlas, Mexico, where the aforementioned restoration experiment is located. 
+            To learn more, please click on the Research tab. </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Photography" class="Photography">
+        <div class="photography-content">
+          <h2>Natural Photography</h2>
+          <p style="padding-bottom: 20px;"> 
+            Natural photography is an integral part of my research and lifestyle. Regarding the former, a prerequisite to developing an effective strategy for ecological intervention is 
+            having a deep knowledge of local species and their natural history; photography is a great step towards obtaining that insight. Regarding the latter, simply put, I love the excitement behind photographing wild species!
+            <br><br> Included below are some of my Award-Winning Photographs from the 2016 UIC BIOS Research Photo/Art Competition.  </p>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item gallery">
+            <img src="Pelecanus.jpg" alt="A Galapagos Brown Pelican (Pelecanus occidentalis ssp urinator) soars over the foamy waters of the Pacific Ocean." class="hand-cursor">
+            <div class="caption">Pelecanus</div>
+            <div class="caption-info">Species: <em>Pelecanus occidentalis</em> | Date: Dec 16, 2015 | Location: Galapagos Islands</div>
+          </div>
+                   
+          <div class="grid-item gallery">
+            <img src="Sciurus.jpg" alt="A female, variegated squirrel (Sciurus variegatoides) hangs upside-down and enjoys a fruity meal from an American Black Nightshade." class="hand-cursor">
+            <div class="caption-info">Sp: <em>Sciurus variegatoides</em> | Date: May 18, 2016 | Location: Monteverde, Costa Rica</div>
+          </div>
+          <div class="grid-item gallery">
+            <img src="Amblyrhynchus.jpg" alt="A trio of marine iguanas (Amblyrhynchus cristatus ssp venustissimus) bask together over the volcanic rocks of Isla Española." class="hand-cursor">
+            <div class="caption-info">Species: <em>Amblyrhynchus cristatus</em> | Date: Jan 30, 2016 | Location: Galapagos Islands</div>
+          </div>
+          <div class="grid-item gallery">
+            <img src="Camponotus.jpg" alt="A troop of the shimmering golden sugar ants (Camponotus sericeiventris) traverses leaf litter in Los Tuxtlas, Veracruz, Mexico." class="hand-cursor">
+            <div class="caption-info">Sp: <em>Camponotus sericeiventris</em> | Date: May 18, 2017 | Location: Los Tuxtlas, Mexico</div>
+          </div>
+        </div>
+      
+        <style>
+          .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+            grid-row-gap: 20px;
+          }
+          
+          .grid-item {
+            position: relative;
+          }
+          
+          .grid-item img {
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+          
+          .caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            display: none;
+          }
+          
+          .enlarged .caption {
+            display: block;
+          }
+        </style>
+      </section>
+      
+
+      <style>
+        .naturalist-sightings-content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .naturalist-sightings-content > div {
+          flex-basis: calc(50% - 10px);
+        }
+      </style>
+      
+      <section id="naturalist-sightings" class="naturalist-sightings" style="padding-top: 0px; padding-bottom: 40px;">
+        <div class="naturalist-sightings-content">
+          <div>
+            <h2>iNaturalist Sightings</h2>
+            <div class="iNaturalist"><style type="text/css" media="screen">
+              .inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1; width: 350px;}
+              .inat-widget-header {margin-bottom: 10px;}
+              .inat-widget td {vertical-align: top; padding-bottom: 10px;}
+              .inat-label { color: #888; }
+              .inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
+              .inat-observation-body, .inat-user-body { padding-left: 10px; }
+              .inat-observation-image {text-align: center;}
+              .inat-observation-image, .inat-user-image { width: 48px; display: inline-block; }
+              .inat-observation-image img, .inat-user-image img { max-width: 48px; }
+              .inat-observation-image img { vertical-align: middle; }
+              .inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:48px;}
+              .inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
+              .inat-user-body {vertical-align: middle;}
+              .inat-widget td.inat-user-body {vertical-align: middle;}
+              .inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 0px;}
+              </style>
+              <div class="inat-widget">
+                  <div class="inat-widget-header">
+                    <a href="https://www.inaturalist.org"><img class ="altlogo" alt="iNaturalist" src="Image/iNatura.png"/> </a>  
+                    <!-- <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-7ef4973e4a8dc5ab069b36f32258a3e8.png"/> </a>   -->
+                  </div>
+                <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/agoutiboy.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
+                <table class="inat-footer">
+                  <tr class="inat-user">
+                      <td class="inat-user-image">
+                        <a border="0" href="https://www.inaturalist.org/observations/agoutiboy"><img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/3590402/thumb.jpg?1599763732" alt="Thumb" /></a>
+                      </td>
+                    <td class="inat-value">
+                      <strong>
+                          <a href="https://www.inaturalist.org/observations/agoutiboy">View my observations »</a>
+                      </strong>
+                    </td>
+                  </tr>
+                </table>
+             
+      
+              </div>
+              </div>
+          </div>
+          <style>
+            .ebird-sightings-content img {
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin-bottom: 10px;
+            }
+          </style>
+          
+          <div class="ebird-sightings-content">
+            <h2>eBird Sightings</h2>
+            <div class="image-container">
+              <a href="https://ebird.org/profile/MTIwMzI5Ng">
+                <img class="ebird-image" src="ebird2.png"  alt="ebird-sighting-1">
+              </a>
+              <a href="https://ebird.org/profile/MTIwMzI5Ng">
+                <img class="ebird-image" src="ebird3.png" alt="ebird-sighting-2">
+              </a>
+            </div>
+          </div>         
+      </section>
+      <section id="redbubble" class="redbubble" style="padding-top: 0px; padding-bottom: 10px;">
+        <div class="redbubble-content">
+          <h2>Redbubble Shop</h2>
+          <p>For those who share a mutual interest for natural photography and want to support my work, a selection of my photos is available as postcards, on clothing, mousepads and many more through Redbubble! <br><br> Here's a sample! Click below to see my full portfolio. </p>
+          <div class="redbubble-iframe-container">
+            <iframe src="https://www.redbubble.com/people/agoutiboy/external-portfolio?count=12" scrolling="yes" allowtransparency="true" width="750" height="529" frameborder="0" columns="3"></iframe>
+          </div>
+          <p class="gray-text">Please ignore pricing above. Widget randomly references one of several products available, not the value of the photograph.</p>
+        </div>
+      </section>
+      
+    </main>
+  
+    <footer>
+      <div class="footer-content">
+        <p>Copyright &copy; 2023 | Dr. Luis Carlos Beltrán</p>
+      </div>
+    </footer>
+    </body>
+  </html>
+  <script src="gallery.js"></script>

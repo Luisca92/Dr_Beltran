@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Beltrán</title>
+    <link rel="stylesheet" href="css_styles/style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo"></div>
+        <h1 style="margin-left: 0;">Dr. Luis Carlos Beltrán</h1>
+        <nav>
+          <ul class="navigation" style="padding-left: 200px;">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Research.html">Research</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="TOF.html">Tree of Life</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="cont" class="cont">
+        <div class="cont-content">
+          <h1></h1>
+        </div>
+      </section>
+
+      <section id="contact-box" class="contact-box" style="padding-bottom: 20px; padding-top: 20px;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <h2 style="margin-bottom: 30px;">Get in Touch!</h2>
+          <div style="max-width: 500px; width: 100%;">
+            <form method="POST" action="https://formspree.io/f/xpzelabq">
+              <div style="display: flex; flex-direction: column;">
+                <div style="margin-bottom: 15px;">
+                  <label for="name" style="display: block; margin-bottom: 5px; font-size: 16px;">First Name:</label>
+                  <input type="text" name="name" id="name" style="border: 1px solid #ddd; border-radius: 5px; font-size: 16px; padding: 8px; width: 100%;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                  <label for="lastname" style="display: block; margin-bottom: 5px; font-size: 16px;">Last Name:</label>
+                  <input type="text" name="lastname" id="lastname" style="border: 1px solid #ddd; border-radius: 5px; font-size: 16px; padding: 8px; width: 100%;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                  <label for="email" style="display: block; margin-bottom: 5px; font-size: 16px;">Email:</label>
+                  <input type="email" name="_replyto" id="email" style="border: 1px solid #ddd; border-radius: 5px; font-size: 16px; padding: 8px; width: 100%;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                  <label for="message" style="display: block; margin-bottom: 5px; font-size: 16px;">Message:</label>
+                  <textarea name="message" id="message" style="border: 1px solid #ddd; border-radius: 5px; font-size: 16px; padding: 8px; width: 100%; height: 150px;"></textarea>
+                </div>
+                <button type="submit" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;">Submit</button>
+              </div>
+            </form>
+            <div id="success-message" style="display:none; color:green;">Thank you! Your message has been sent.</div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+      $(document).ready(function() {
+        $("form").submit(function(event) {
+          event.preventDefault();
+          $.ajax({
+            url: $(this).attr("action"),
+            method: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(data) {
+              $("#success-message").css("display", "block");
+            },
+            error: function() {
+              alert("Error submitting form.");
+            }
+          });
+        });
+      });
+      </script>
+      
+      
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>Copyright &copy; 2023 | Dr. Luis Carlos Beltrán</p>
+      </div>
+    </footer>
+  </body>
+</html>
+<script src="js_styles/gallery.js"></script>
