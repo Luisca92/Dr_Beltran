@@ -1,88 +1,90 @@
+/* Global Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif !important;
-    font-size: 16px !important;
-  }
-  
-  /* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #f7f7f7;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-  }
-  
-  /* Header content */
-  .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif; /* Specific font for logo and name */
+}
 
-  .logo {
-    width: 50px;
-    height: 50px;
-    background-image: url('Images/my-logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-  }
-  
-  /* Navigation */
+body {
+  background-color: floralwhite;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url('Images/my-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  margin-right: 20px; /* Adjust space between logo and name */
+}
+
 .navigation {
-  list-style: none!important;
-  display: flex!important;
-  justify-content: flex-end!important;
-  margin: 0!important;
-  padding: 0!important;
-  font-family: Helvetica, sans-serif !important;
-  
- 
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation li {
-  margin-left: 20px !important;
+  margin-left: 20px;
 }
 
 .navigation a {
-  text-decoration: none!important;
-  color: #555!important;
-  font-size: 1.2em !important;
-  font-weight: bold!important;
-  padding: 10px 15px!important;
-  border-radius: 5px!important;
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .navigation a:hover,
 .navigation a.active {
-  background-color: #333!important;
-  color: #fff!important;
-  transition: all 0.3s ease-in-out!important;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Sticky navigation */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* Active button */
 .active {
   background-color: #333;
   color: #fff;
 }
 
+/* Media Queries for Navigation */
 @media screen and (max-width: 768px) {
   .navigation {
     flex-direction: column;
@@ -97,215 +99,156 @@ header {
   
   .header-content h1 {
     font-size: 2em;
-
   }
   
   .navigation a {
     font-size: 1.5em;
   }
 }
-  
-  section {
-    padding: 100px 0;
-  }
-  
-  section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  section p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-  
-  .home {
-    background-image: url("Images/forest.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
-  
-  .home-content h1 {
-    text-align: center;
-    font-size: 4em;
-    margin-top: 200px;
-    text-shadow: 2px 2px #333;
-  }
 
-  .exper {
-    background-image: url("Images/plots.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
-  
-  .cvsection {
-    background-image: url("Images/cv-section-image.jpeg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
+/* Section Styles */
+section {
+  padding: 100px 0;
+}
 
-  .tof {
-    background-image: url("Images/Persea.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
+section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-  .tof-content h1 {
-    text-align: center;
-    font-size: 4em;
-    margin-top: 250px;
-    text-shadow: 2px 2px #333;
-  }
+section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
 
-  .cont {
-    background-image: url("Images/contact-photo.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-  }
+/* Home Section */
+.home {
+  background-image: url("Images/forest.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
 
-  .cont-content h1 {
-    text-align: center;
-    font-size: 4em;
-    margin-top: 200px;
-    text-shadow: 2px 2px #333;
-  }
-  .exper-content h1 {
-    text-align: center;
-    font-size: 4em;
-    margin-top: 200px;
-    text-shadow: 2px 2px #333;
-  }
+.home-content h1 {
+  text-align: center;
+  font-size: 4em;
+  margin-top: 200px;
+  text-shadow: 2px 2px #333;
+}
 
-  
-  .cvsection-content h1 {
-    text-align: center;
-    font-size: 4em;
-    margin-top: 200px;
-    text-shadow: 2px 2px #333;
-  }
-  .photo {
-    display: block;
-    margin: 0 auto;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    margin-top: -150px;
-    border: 5px solid #fff;
-  }
-  
-  .contact {
-    background-color: #f4f4f4;
-  }
-  
-  .contact-content {
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  .footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
- /* Sticky navigation */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Active button */
-  .active {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .navigation {
-      flex-direction: column;
-    }
-    
-    .navigation li {
-      margin: 10px 0;
-    }
-    
-    .photo {
-      max-width: 200px;
-      margin-top: -100px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .navigation a {
-      padding: 5px 10px;
-      font-size: 0.8em;
-    }
-    
-    .home-content h1 {
-      font-size: 3em;
-    }
+/* Research Section */
+.research {
+  padding-bottom: 0px;
+  padding-top: 20px;
+}
 
-    .exper-content h1 {
-      font-size: 3em;
-    }
-  }
-   
-  .research img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 10px 0;
-  }
-  
-  .research-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .research-image {
-    flex: 1;
-  }
-  
-  .research-text {
-    flex: 2;
-  }
-  
-  .research-text h2 {
-    text-align: left;
-  }
-  
-  .research-text p {
-    text-align: justify;
-    margin-top: 10px;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
- /* CSS for gallery overlay */
+.research img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.research-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-image {
+  flex: 1;
+}
+
+.research-text {
+  flex: 2;
+}
+
+.research-text h2 {
+  text-align: left;
+}
+
+.research-text p {
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/* Section Divider */
+.section-divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Photography Section */
+.Photography {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.Photography h2 {
+  text-align: center;
+  margin-bottom: 10px; /* Reduce bottom margin */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Photography p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px; /* Add top margin */
+  margin-bottom: 20px; /* Adjust bottom margin if needed */
+  line-height: 1.5;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  display: none;
+}
+
+.enlarged .caption {
+  display: block;
+}
+
+.caption-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Gallery Overlay */
 .gallery-overlay {
   position: fixed;
   top: 0;
@@ -330,32 +273,6 @@ header {
   object-fit: contain;
 }
 
-/* CSS for gallery overlay */
-.gallery-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.gallery-overlay.active {
-  opacity: 1;
-}
-
-.gallery-overlay img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/* CSS for enlarged images */
 .enlarged {
   display: flex;
   justify-content: center;
@@ -367,7 +284,6 @@ header {
   height: 100%;
 }
 
-/* Adjust position of enlarged image when navigation bar is present */
 body.nav-present .enlarged img {
   max-height: calc(100% - 60px);
 }
@@ -381,7 +297,7 @@ body.nav-present .enlarged img {
   bottom: 10px;
   right: 10px;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
@@ -392,45 +308,15 @@ body.nav-present .enlarged img {
   display: block;
 }
 
-.caption-info {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.gallery-container {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+/* Naturalist Sightings */
+.naturalist-sightings-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.gallery-container img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.gallery-container .caption {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  font-size: 20px;
-  font-style: italic;
-}
-
-.hidden {
-  display: none;
+.naturalist-sightings-content > div {
+  flex-basis: calc(50% - 10px);
 }
 
 .iNaturalist {
@@ -442,7 +328,14 @@ body.nav-present .enlarged img {
   border: 2px solid black;
   background-color: #f5f5f5;
   min-height: 620px;
+}
 
+/* eBird Section */
+.ebird-sightings-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .image-container {
@@ -462,6 +355,7 @@ body.nav-present .enlarged img {
   height: auto;
 }
 
+/* Redbubble Section */
 .redbubble-iframe-container {
   display: flex;
   justify-content: center;
@@ -474,6 +368,142 @@ body.nav-present .enlarged img {
 
 .hand-cursor:hover {
   cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
+  
+  .navigation li {
+    margin: 10px 0;
+  }
+  
+  .photo {
+    max-width: 200px;
+    margin-top: -100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation a {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+  
+  .home-content h1 {
+    font-size: 3em;
+  }
+
+  .exper-content h1 {
+    font-size: 3em;
+  }
+}
+
+/* Miscellaneous */
+.photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: -150px;
+  border: 5px solid #fff;
+}
+
+.contact {
+  background-color: #f4f4f4;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  background-color: white; /* Add this line for white background */
+  padding: 20px;
+}
+
+/* Title inside modal */
+.modal-content h3 {
+  text-align: center;
+  color: #333; /* Darker color for title */
+  margin-bottom: 10px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .img {
@@ -505,10 +535,6 @@ body.nav-present .enlarged img {
   background-color: yellow;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 .enlarge {
   width: auto;
   height: auto;
@@ -533,14 +559,22 @@ img:hover {
 }
 
 .no-sticky .navigation {
-  font-weight: normal!important;
-  line-height: normal!important;
+  font-weight: normal !important;
+  line-height: normal !important;
 }
 
 .no-sticky h1 {
-font-weight: bold !important;
-font-family: Arial, sans-serif!important;
-font-size: 32px !important;
-line-height: 1!important;
-margin-bottom: 0 !important;
+  font-weight: bold !important;
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  margin-bottom: 0 !important;
+}
+
+.studies-content h2 {
+  padding-bottom: 0px;
+}
+
+/* Add hover effect to table rows */
+.studies tbody tr:hover {
+  cursor: pointer;
 }
