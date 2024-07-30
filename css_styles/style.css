@@ -155,11 +155,24 @@ section p {
   flex: 2;
 }
 
+.researcher-text {
+  flex: 2;
+}
+
 .research-text h2 {
   text-align: left;
 }
 
 .research-text p {
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.researcher-text h2 {
+  text-align: left;
+}
+
+.researcher-text p {
   text-align: justify;
   margin-top: 10px;
 }
@@ -688,6 +701,13 @@ footer {
   height: 20px;
 }
 
+/* Freelance */
+#freelance-top {
+  padding-top: 100px;
+}
+
+
+/* Contact Me page */
 /* Base styles for the input elements */
 .contact-box input[type="text"],
 .contact-box input[type="email"],
@@ -804,12 +824,21 @@ footer {
   /* Photography Section */
   .Photography h2 {
     font-size: 1.5em; /* Adjust the font size of h2 */
+    padding-top: 40px;
   }
 
   .Photography p {
     font-size: 1em; /* Adjust the font size of paragraph */
-    padding: 0 10px; /* Add some padding for better readability */
+    padding-right: 20px; /* Add some padding for better readability */
+    padding-left: 20px; /* Add some padding for better readability */
+    text-align: justify;
   }
+
+  .redbubble-content p {
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
   .grid-container {
     display: flex;
@@ -887,18 +916,27 @@ footer {
     text-align: center;
   }
 
+  .researcher-text h2 {
+    text-align: center;
+  }
+  .researcher-text p {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
   .research-text p {
     padding-right: 20px;
   }
 
   .studies-content h2 {
     padding-left: 20px;
-    padding-right: 5px;
+    padding-right: 20px;
   }
 
   .studies-content p {
     padding-left: 20px;
-    padding-right: 5px;
+    padding-right: 20px;
+    text-align: justify;
   }
 
   /* Remove specific section divider */
