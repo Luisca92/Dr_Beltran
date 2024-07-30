@@ -84,30 +84,10 @@ header {
   color: #fff;
 }
 
-/* Media Queries for Navigation */
-@media screen and (max-width: 768px) {
-  .navigation {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .navigation li {
-    margin: 10px 0;
-  }
-  
-  .header-content h1 {
-    font-size: 2em;
-  }
-  
-  .navigation a {
-    font-size: 1.5em;
-  }
-}
-
 /* Section Styles */
 section {
+  max-width: 1200px;  /* Ensure this matches header-content */
+  margin: 0 auto;
   padding: 100px 0;
 }
 
@@ -152,6 +132,10 @@ section p {
   display: block;
   margin: 0 auto;
   padding: 10px 0;
+}
+
+.research-image img {
+  padding-right: 20px;
 }
 
 .research-container {
@@ -308,50 +292,144 @@ body.nav-present .enlarged img {
   display: block;
 }
 
-/* Naturalist Sightings */
-.naturalist-sightings-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Grid for inaturalist and ebird */
+.sightings-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between items */
+  padding-top: 0;
+  padding-bottom: 40px; /* As defined in the inline style */
 }
 
-.naturalist-sightings-content > div {
-  flex-basis: calc(50% - 10px);
-}
-
-.iNaturalist {
+/* inaturalist container */
+.inat-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-left: 150px;
-  margin-right: 150px;
-  border: 2px solid black;
-  background-color: #f5f5f5;
-  min-height: 620px;
+  text-align: center;
+  margin: 20px;
 }
 
-/* eBird Section */
-.ebird-sightings-content img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.inat-widget {
+  font-family: Georgia, serif;
+  padding: 10px;
+  line-height: 1;
+  width: 350px;
+}
+
+.inat-widget-header {
   margin-bottom: 10px;
 }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
-  background-color: #f5f5f5;
-  margin-left: 150px;
-  margin-right: 150px;
-  min-height: 620px;
+.inat-widget td {
+  vertical-align: top;
+  padding-bottom: 10px;
 }
 
+.inat-label {
+  color: #888;
+}
+
+.inat-meta {
+  font-size: smaller;
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
+.inat-observation-body,
+.inat-user-body {
+  padding-left: 10px;
+}
+
+.inat-observation-image {
+  text-align: center;
+}
+
+.inat-observation-image,
+.inat-user-image {
+  width: 48px;
+  display: inline-block;
+}
+
+.inat-observation-image img,
+.inat-user-image img {
+  max-width: 48px;
+}
+
+.inat-observation-image img {
+  vertical-align: middle;
+}
+
+.inat-widget-small .inat-observation-image {
+  display: block;
+  float: left;
+  margin: 0 3px 3px 0;
+  height: 48px;
+}
+
+.inat-label,
+.inat-value,
+.inat-user {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.inat-user-body {
+  vertical-align: middle;
+}
+
+.inat-widget td.inat-user-body {
+  vertical-align: middle;
+}
+
+.inat-widget .inat-footer td.inat-value {
+  vertical-align: middle;
+  padding-left: 0px;
+}
+
+
+/* ebird container */
+.ebird-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.iNaturalist {
+  border: 2px solid black;
+  background-color: #f5f5f5;
+  min-height: 600;
+  max-width: 400px;  /* Ensure it takes the full width of the grid column */
+}
+
+/* eBird Section */
+.ebird-sightings-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px; /* Set a fixed width for the container */
+  margin: 0 auto;
+}
+
+/* ebird image container */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: #f5f5f5;
+  min-height: 560px; /* Minimum height to ensure enough space */
+  max-width: 400px; /* Constrain the width */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* the two ebird images */
 .ebird-image {
-  width: 295px;
+  width: 250px;
   height: auto;
 }
 
@@ -359,6 +437,12 @@ body.nav-present .enlarged img {
 .redbubble-iframe-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.redbubble-content {
+  text-align: center;
 }
 
 .gray-text {
@@ -381,103 +465,6 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  .navigation {
-    flex-direction: column;
-  }
-  
-  .navigation li {
-    margin: 10px 0;
-  }
-  
-  .photo {
-    max-width: 200px;
-    margin-top: -100px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .navigation a {
-    padding: 5px 10px;
-    font-size: 0.8em;
-  }
-  
-  .home-content h1 {
-    font-size: 3em;
-  }
-
-  .exper-content h1 {
-    font-size: 3em;
-  }
-}
-
-/* Miscellaneous */
-.photo {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-  height: auto;
-  border-radius: 50%;
-  margin-top: -150px;
-  border: 5px solid #fff;
-}
-
-.contact {
-  background-color: #f4f4f4;
-}
-
-.contact-content {
-  text-align: center;
-}
-
-/* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  background-color: white; /* Add this line for white background */
-  padding: 20px;
-}
-
-/* Title inside modal */
-.modal-content h3 {
-  text-align: center;
-  color: #333; /* Darker color for title */
-  margin-bottom: 10px;
-}
-
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
 }
 
 @keyframes zoom {
@@ -577,4 +564,403 @@ footer {
 /* Add hover effect to table rows */
 .studies tbody tr:hover {
   cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  background-color: white; /* Add this line for white background */
+  padding: 20px;
+}
+
+/* Title inside modal */
+.modal-content h3 {
+  text-align: center;
+  color: #333; /* Darker color for title */
+  margin-bottom: 10px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* Research page  */
+
+.exper {
+  padding: 50px 0;
+}
+
+.experiment {
+  padding-bottom: 0px; 
+  padding-top: 20px;
+}
+
+.research-tab-intro-container{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.research-tab-intro-container h2 {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.research-tab-small-container {
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: 0 40px;
+  justify-content: space-around; /* Add this property */
+}
+
+.div-flex-1 {
+  flex: 1
+}
+
+.div-flex-1 p {
+  text-align: justify;
+}
+
+.GE-IMG-container{
+  margin-left: 30px;
+  flex: 0 0 auto; /* Prevent the container from shrinking */
+}
+
+.TuxtlasGE {
+  width: 400px; /* Set a fixed width */
+  max-width: 100%; /* Ensure it doesn't exceed the container */
+  border: 2px solid black; 
+  filter: grayscale(50%);
+  margin-left: 30px;
+}
+
+.studies {
+  padding-bottom: 20px; 
+  padding-top: 20px;
+}
+
+.table-tuxtlas-studies {
+  border-collapse: collapse; 
+  width: 80%; 
+  margin: 0 auto;
+}
+
+.table-other-studies {
+  border-collapse: collapse; 
+  width: 80%; 
+  margin: 0 auto
+}
+
+/* Base styles for the input elements */
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box input[type="submit"],
+.contact-box textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%; /* Default to full width */
+  font-family: 'Playfair Display', serif; /* Apply the specific font to form elements */
+}
+
+.contact-box label {
+  font-family: 'Playfair Display', serif; 
+}
+
+.submit-button {
+  background-color: #21c2db; /* Background color */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif; /* Apply the specific font to the button */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 200px; /* Set button width */
+  margin: 0 auto; /* Center the button */
+}
+
+.submit-button:hover {
+  background-color: #1aa6ba; /* Darker shade for hover effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:active {
+  background-color: #18a0a7; /* Even darker shade for active state */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow for active state */
+  transform: translateY(2px); /* Slight move down effect on click */
+}
+
+
+.success-message {
+  display: none;
+  color: green;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1054px) {
+  .research-tab-small-container {
+    display: block;
+    text-align: center;
+  }
+
+  .div-flex-1 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .GE-IMG-container {
+    margin: 20px auto;
+  }
+
+  .TuxtlasGE {
+    width: 400px; /* Set a fixed width */
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none; /* Hide the logo */
+  }
+
+  .header-content {
+    flex-direction: column; /* Stack h1 and nav vertically */
+    align-items: center;
+  }
+
+  .header-content h1 {
+    font-size: 1.5em; /* Adjust the font size of h1 */
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    gap: 0px; /* Space between grid items */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Ensure navigation takes full width */
+    text-align: center; /* Center text within grid items */
+  }
+
+  .navigation li {
+    margin: 5px 0;
+  }
+
+  .navigation a {
+    font-size: 1.2em; /* Adjust the font size of the navigation links */
+  }
+
+  /* Photography Section */
+  .Photography h2 {
+    font-size: 1.5em; /* Adjust the font size of h2 */
+  }
+
+  .Photography p {
+    font-size: 1em; /* Adjust the font size of paragraph */
+    padding: 0 10px; /* Add some padding for better readability */
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-item {
+    width: 100%; /* Ensure the images do not bleed beyond the screen width */
+    margin-bottom: 20px; /* Add some space between the items */
+  }
+
+  .grid-item img {
+    width: 100%; /* Ensure the images scale to the width of their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Research Section */
+  .research-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .research-image {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .research-image img {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .research-text {
+    text-align: center;
+  }
+
+  .sighting-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inat-widget,
+  .ebird-sightings-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .inat-widget {
+    width: 300px;
+  }
+
+  .ebird-sightings-content .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sightings-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    padding-top: 0;
+    padding-bottom: 40px; /* As defined in the inline style */
+  }
+
+  .research-image {
+    width: 300px;
+  }
+
+  .research-text h2 {
+    text-align: center;
+  }
+
+  .research-text p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .studies-content h2 {
+    padding-left: 20px;
+    padding-right: 5px;
+  }
+
+  .studies-content p {
+    padding-left: 20px;
+    padding-right: 5px;
+  }
+
+  /* Remove specific section divider */
+  .section-divider:nth-of-type(2) {
+    display: none;
+  }
+
+  .table-tuxtlas-studies {
+    font-size: 0.75rem;
+  }
+
+  .table-other-studies {
+    font-size: 0.75rem;
+  }
+
+  .resume-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .navigation a {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+
+  .home-content h1 {
+    font-size: 3em;
+  }
+
+  .exper-content h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .contact-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box label {
+    width: 90%; /* Match the width of the inputs */
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .contact-box input[type="text"],
+  .contact-box input[type="email"],
+  .contact-box input[type="submit"],
+  .contact-box textarea {
+    width: 100% !important; /* Ensure it doesn't exceed the container */
+    margin: 0 auto 15px auto;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .resume-container {
+    flex-direction: column;
+  }
+  
+  .section-divider {
+    display: none;
+  }
 }

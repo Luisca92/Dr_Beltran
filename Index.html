@@ -40,13 +40,14 @@
     <section class="research">
       <div class="research-container">
         <div class="research-image">
-          <img src="research-photo.jpg" alt="My research image" style="padding-right: 20px;">
+          <img src="research-photo.jpg" alt="My research image">
         </div>
         <div class="research-text">
           <h2>The Researcher</h2>
           <p> I got my BA in Biology & Environmental Studies from Lake Forest College (2011-15) and my PhD from the University of Illinois, Chicago (2016-21), working with Dr. Henry F. Howe on how initial tree species composition influences the recovery of biodiversity, forest structure, and ecological function in a tropical restoration experiment.
             I then moved back to my home country of Colombia for my postdoctoral training with Dr. Lilia Roa-Fuentes at Pontificia Universidad Javeriana, working on a forest chronosequence study in Caquetá as well as continuing studies from Los Tuxtlas, Mexico, where the aforementioned restoration experiment is located. 
-            To learn more on this topic, please click on the Research tab. Recently, I have concentrated my efforts on programming, aiming to develop web and mobile applications for use in conservation and restoration. You can view my portfolio in the Programming tab.</p>
+            To learn more on this topic, please click on the <a href="Research.html">Research</a> tab. Recently, I have concentrated my efforts on programming, aiming to develop web and mobile applications for use in conservation and restoration. 
+            For more information on this topic, please check out my Programming resume by visiting the <a href="CV.html">CV</a> tab.</p>
         </div>
       </div>
     </section>
@@ -88,72 +89,59 @@
     </div>
 
     <hr class="section-divider">
-
-    <section id="naturalist-sightings" class="naturalist-sightings" style="padding-top: 0px; padding-bottom: 40px;">
-      <div class="naturalist-sightings-content">
-        <div>
-          <h2>iNaturalist Sightings</h2>
-          <div class="iNaturalist"><style type="text/css" media="screen">
-            .inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1; width: 350px;}
-            .inat-widget-header {margin-bottom: 10px;}
-            .inat-widget td {vertical-align: top; padding-bottom: 10px;}
-            .inat-label { color: #888; }
-            .inat-meta { font-size: smaller; margin-top: 3px; line-height: 1.2;}
-            .inat-observation-body, .inat-user-body { padding-left: 10px; }
-            .inat-observation-image {text-align: center;}
-            .inat-observation-image, .inat-user-image { width: 48px; display: inline-block; }
-            .inat-observation-image img, .inat-user-image img { max-width: 48px; }
-            .inat-observation-image img { vertical-align: middle; }
-            .inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:48px;}
-            .inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
-            .inat-user-body {vertical-align: middle;}
-            .inat-widget td.inat-user-body {vertical-align: middle;}
-            .inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 0px;}
-            </style>
-            <div class="inat-widget">
-                <div class="inat-widget-header">
-                  <a href="https://www.inaturalist.org"><img class ="altlogo" alt="iNaturalist" src="Image/iNatura.png"/> </a>  
-                  <!-- <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-7ef4973e4a8dc5ab069b36f32258a3e8.png"/> </a>   -->
-                </div>
-              <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/agoutiboy.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
-              <table class="inat-footer">
-                <tr class="inat-user">
-                    <td class="inat-user-image">
-                      <a href="https://www.inaturalist.org/observations/agoutiboy"><img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/3590402/thumb.jpg?1599763732" alt="Thumb" /></a>
-                    </td>
-                  <td class="inat-value">
-                    <strong>
-                        <a href="https://www.inaturalist.org/observations/agoutiboy">View my observations »</a>
-                    </strong>
-                  </td>
-                </tr>
-              </table>
+    <section class="sightings-grid-container" style="padding-top: 0px; padding-bottom: 40px;">
+      <div class="inat-container">
+        <h2>iNaturalist Sightings</h2>
+        <div class="iNaturalist">
+          <div class="inat-widget">
+            <div class="inat-widget-header">
+              <a href="https://www.inaturalist.org"><img class ="altlogo" alt="iNaturalist" src="Image/iNatura.png"/> </a>
+            </div>
+            <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/agoutiboy.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
+            <table class="inat-footer">
+              <tr class="inat-user">
+                <td class="inat-user-image">
+                  <a href="https://www.inaturalist.org/observations/agoutiboy"><img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/3590402/thumb.jpg?1599763732" alt="Thumb" /></a>
+                </td>
+                <td class="inat-value">
+                  <strong>
+                    <a href="https://www.inaturalist.org/observations/agoutiboy">View my observations »</a>
+                  </strong>
+                </td>
+              </tr>
+            </table>
           </div>
-          </div>
-      </div>
-      <div class="ebird-sightings-content">
-        <h2>eBird Sightings</h2>
-        <div class="image-container">
-          <a href="https://ebird.org/profile/MTIwMzI5Ng">
-            <img class="ebird-image" src="ebird2.png"  alt="ebird-sighting-1">
-          </a>
-          <a href="https://ebird.org/profile/MTIwMzI5Ng">
-            <img class="ebird-image" src="ebird3.png" alt="ebird-sighting-2">
-          </a>
         </div>
-      </div>         
+      </div>
+
+      <div class="ebird-container">
+        <h2>eBird Sightings</h2>
+        <div class="ebird-sightings-content">
+          <div class="image-container">
+            <a href="https://ebird.org/profile/MTIwMzI5Ng">
+              <img class="ebird-image" src="ebird2.png" alt="ebird-sighting-1">
+            </a>
+            <a href="https://ebird.org/profile/MTIwMzI5Ng">
+              <img class="ebird-image" src="ebird3.png" alt="ebird-sighting-2">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
+
     <hr class="section-divider">
+    
     <section id="redbubble" class="redbubble" style="padding-top: 0px; padding-bottom: 10px;">
       <div class="redbubble-content">
         <h2>Redbubble Shop</h2>
-        <p>For those who share a mutual interest for natural photography and want to support my work, a selection of my photos is available as postcards, on clothing, mousepads and many more through Redbubble! <br><br> Here's a sample! Click below to see my full portfolio. </p>
-        <div class="redbubble-iframe-container">
+        <p id="redbubble-description">For those who share a mutual interest for natural photography and want to support my work, a selection of my photos is available as postcards, on clothing, mousepads and many more through Redbubble! <br><br> Here's a sample! Click below to see my full portfolio. </p>
+        <div id="redbubble-iframe-container" class="redbubble-iframe-container">
           <iframe src="https://www.redbubble.com/people/agoutiboy/external-portfolio?count=12" scrolling="yes" allowtransparency="true" width="750" height="529" frameborder="0" columns="3"></iframe>
         </div>
         <p class="gray-text">Please ignore pricing above. Widget randomly references one of several products available, not the value of the photograph.</p>
       </div>
     </section>
+    
   </main>
 
   <footer>
@@ -193,6 +181,40 @@
         modal.style.display = "none";
       }
     }
+</script>
+<script>
+  function updateRedbubbleContent() {
+    var width = window.innerWidth;
+    var description = document.getElementById('redbubble-description');
+    var iframeContainer = document.getElementById('redbubble-iframe-container');
+    var grayTextElement = document.querySelector('.gray-text');
+
+    if (width <= 768) {
+        description.innerHTML = 'For those who share a mutual interest for natural photography and want to support my work, a selection of my photos is available as postcards, on clothing, mousepads and many more through Redbubble! <br><br> <a href="https://www.redbubble.com/people/AgoutiBoy/shop?asc=u" target="_blank">Click here to see my full portfolio</a>';
+        iframeContainer.style.display = 'none';
+        
+        // Remove gray-text element if it exists
+        if (grayTextElement) {
+            grayTextElement.style.display = 'none';
+        }
+    } else {
+        description.innerHTML = 'For those who share a mutual interest for natural photography and want to support my work, a selection of my photos is available as postcards, on clothing, mousepads and many more through Redbubble! <br><br> Here\'s a sample! Click below to see my full portfolio.';
+        iframeContainer.style.display = 'block';
+        
+        // Re-add gray-text element if it exists
+        if (grayTextElement) {
+            grayTextElement.style.display = 'block';
+        }
+    }
+}
+
+// Call the function on window resize
+window.addEventListener('resize', updateRedbubbleContent);
+
+// Initial call to set the correct state
+updateRedbubbleContent();
+
+
 </script>
 
 </body>
