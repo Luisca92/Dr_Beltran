@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Beltrán</title>
+  <link rel="stylesheet" href="css_styles/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-name">
+        <div class="logo"></div>
+        <h1>Dr. Luis Carlos Beltrán</h1>          
+      </div>
+      <nav>
+        <ul class="navigation">
+          <li><a href="Index-es.html" class="active">INICIO</a></li>
+          <li><a href="Research-es.html">INVESTIGACIÓN</a></li>
+          <li><a href="Freelance-es.html">CONSULTORÍA</a></li>
+          <li><a href="CV-es.html">CV</a></li>
+          <li><a href="contact-es.html">CONTACTO</a></li>
+          <!-- Botón de idioma -->
+          <li><a href="Index.html" class="lang-btn">ENGLISH</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1></h1>
+      </div>
+    </section>
+
+    <section class="research">
+      <div class="research-container">
+        <div class="research-image">
+          <img src="research-photo.jpg" alt="Imagen de investigación">
+        </div>
+        <div class="researcher-text">
+          <h2>El Investigador</h2>
+          <p> Obtuve mi título de pregrado en Biología y Estudios Ambientales en Lake Forest College (2011-15) 
+            y mi doctorado en la Universidad de Illinois en Chicago (2016-21), trabajando con el Dr. Henry F. Howe sobre cómo la composición inicial de especies de árboles influye en la recuperación de la biodiversidad, la estructura del bosque y el funcionamiento ecológico en un experimento de restauración tropical. 
+            Posteriormente regresé a Colombia, mi país natal, para realizar mi posdoctorado con la Dra. Lilia Roa-Fuentes en la Pontificia Universidad Javeriana, trabajando en un estudio de cronosecuencia forestal en Caquetá, además de continuar con investigaciones en Los Tuxtlas, México, donde se ubica el experimento de restauración mencionado. 
+            Para conocer más sobre este tema, por favor haz clic en la pestaña <a href="Research-es.html">Investigación</a>. 
+            Recientemente, he concentrado mis esfuerzos en la programación, con el objetivo de desarrollar aplicaciones web y móviles para la conservación y la restauración. 
+            Para más información sobre este tema, revisa mi hoja de vida en la pestaña <a href="CV-es.html">CV</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr class="section-divider">
+
+    <section class="Photography">
+      <div>
+        <h2>Fotografía de Naturaleza</h2>
+        <p> 
+          La fotografía de naturaleza es parte integral de mi investigación y de mi estilo de vida. En cuanto a la investigación, un requisito para desarrollar una estrategia efectiva de intervención ecológica es tener un conocimiento profundo de las especies locales y su historia natural; la fotografía es un gran paso hacia esa comprensión. 
+          En cuanto a lo personal, simplemente me apasiona la emoción de fotografiar especies silvestres. 
+          <br><br> A continuación se incluyen algunas de mis fotografías premiadas en el Concurso de Fotografía/Arte de Investigación BIOS de UIC en 2016.  
+        </p>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item gallery">
+          <img src="Pelecanus.jpg" alt="Un pelícano pardo de Galápagos (Pelecanus occidentalis ssp urinator) sobrevuela las aguas del Pacífico." class="hand-cursor" data-caption="Es: <em>Pelecanus occidentalis</em> | Fecha: 16 Dic 2015 | Lugar: Islas Galápagos">
+          <div class="caption">Pelecanus</div>
+          <div class="caption-info">Es: <em>Pelecanus occidentalis</em> | Fecha: 16 Dic 2015 | Lugar: Islas Galápagos</div>
+        </div>
+        <div class="grid-item gallery">
+          <img src="Sciurus.jpg" alt="Una ardilla variada hembra (Sciurus variegatoides) cuelga boca abajo y disfruta de un fruto de solanum." class="hand-cursor" data-caption="Es: <em>Sciurus variegatoides</em> | Fecha: 18 May 2016 | Lugar: Monteverde, Costa Rica">
+          <div class="caption-info">Es: <em>Sciurus variegatoides</em> | Fecha: 18 May 2016 | Lugar: Monteverde, Costa Rica</div>
+        </div>
+        <div class="grid-item gallery">
+          <img src="Amblyrhynchus.jpg" alt="Una tríada de iguanas marinas (Amblyrhynchus cristatus ssp venustissimus) toman el sol sobre las rocas volcánicas de Isla Española." class="hand-cursor" data-caption="Es: <em>Amblyrhynchus cristatus</em> | Fecha: 30 Ene 2016 | Lugar: Islas Galápagos">
+          <div class="caption-info">Es: <em>Amblyrhynchus cristatus</em> | Fecha: 30 Ene 2016 | Lugar: Islas Galápagos</div>
+        </div>
+        <div class="grid-item gallery">
+          <img src="Camponotus.jpg" alt="Un grupo de hormigas doradas (Camponotus sericeiventris) recorre la hojarasca en Los Tuxtlas, Veracruz, México." class="hand-cursor" data-caption="Es: <em>Camponotus sericeiventris</em> | Fecha: 18 May 2017 | Lugar: Los Tuxtlas, México">
+          <div class="caption-info">Es: <em>Camponotus sericeiventris</em> | Fecha: 18 May 2017 | Lugar: Los Tuxtlas, México</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <hr class="section-divider">
+
+    <section class="sightings-grid-container" style="padding-top: 0px; padding-bottom: 40px;">
+      <div class="inat-container">
+        <h2>Avistamientos en iNaturalist</h2>
+        <div class="iNaturalist">
+          <div class="inat-widget">
+            <div class="inat-widget-header">
+              <a href="https://www.inaturalist.org"><img class ="altlogo" alt="iNaturalist" src="iNatura.png"/> </a>
+            </div>
+            <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/agoutiboy.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
+            <table class="inat-footer">
+              <tr class="inat-user">
+                <td class="inat-user-image">
+                  <a href="https://www.inaturalist.org/observations/agoutiboy"><img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/3590402/thumb.jpg?1599763732" alt="Thumb" /></a>
+                </td>
+                <td class="inat-value">
+                  <strong>
+                    <a href="https://www.inaturalist.org/observations/agoutiboy">Ver mis observaciones »</a>
+                  </strong>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="ebird-container">
+        <h2>Avistamientos en eBird</h2>
+        <div class="ebird-sightings-content">
+          <div class="image-container">
+            <a href="https://ebird.org/profile/MTIwMzI5Ng">
+              <img class="ebird-image" src="ebird2.png" alt="avistamiento-ebird-1">
+            </a>
+            <a href="https://ebird.org/profile/MTIwMzI5Ng">
+              <img class="ebird-image" src="ebird3.png" alt="avistamiento-ebird-2">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+    
+    <section id="redbubble" class="redbubble" style="padding-top: 0px; padding-bottom: 10px;">
+      <div class="redbubble-content">
+        <h2>Tienda en Redbubble</h2>
+        <p id="redbubble-description">Para quienes comparten el gusto por la fotografía de naturaleza y quieren apoyar mi trabajo, una selección de mis fotos está disponible como postales, ropa, mousepads y mucho más a través de Redbubble. <br><br> Aquí una muestra. Haz clic abajo para ver mi portafolio completo. </p>
+        <div id="redbubble-iframe-container" class="redbubble-iframe-container">
+          <iframe src="https://www.redbubble.com/people/agoutiboy/external-portfolio?count=12" scrolling="yes" allowtransparency="true" width="750" height="529" frameborder="0" columns="3"></iframe>
+        </div>
+        <p class="gray-text">Por favor ignora los precios mostrados arriba. El widget hace referencia aleatoria a un producto, no al valor real de la fotografía.</p>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Copyright &copy; 2025 | Dr. Luis Carlos Beltrán</p>
+    </div>
+  </footer>
+
+  <script>
+    // Modal
+    var modal = document.getElementById("myModal");
+    var images = document.getElementsByClassName("hand-cursor");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    for (var i = 0; i < images.length; i++) {
+      images[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.getAttribute('data-caption');
+      }
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+    function updateRedbubbleContent() {
+      var width = window.innerWidth;
+      var description = document.getElementById('redbubble-description');
+      var iframeContainer = document.getElementById('redbubble-iframe-container');
+      var grayTextElement = document.querySelector('.gray-text');
+
+      if (width <= 768) {
+          description.innerHTML = 'Una selección de mis fotos está disponible en Redbubble como postales, ropa y más. <br><br> <a href="https://www.redbubble.com/people/AgoutiBoy/shop?asc=u" target="_blank">Haz clic aquí para ver mi portafolio completo</a>';
+          iframeContainer.style.display = 'none';
+          if (grayTextElement) grayTextElement.style.display = 'none';
+      } else {
+          description.innerHTML = 'Para quienes comparten el gusto por la fotografía de naturaleza y quieren apoyar mi trabajo, una selección de mis fotos está disponible como postales, ropa, mousepads y mucho más a través de Redbubble. <br><br> Aquí una muestra. Haz clic abajo para ver mi portafolio completo.';
+          iframeContainer.style.display = 'block';
+          if (grayTextElement) grayTextElement.style.display = 'block';
+      }
+    }
+
+    window.addEventListener('resize', updateRedbubbleContent);
+    updateRedbubbleContent();
+  </script>
+</body>
+</html>

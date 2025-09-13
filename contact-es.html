@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,12 @@
         </div>
         <nav>
           <ul class="navigation">
-            <li><a href="Index.html">HOME</a></li>
-            <li><a href="Research.html">RESEARCH</a></li>
-            <li><a href="Freelance.html">FREELANCE</a></li>
-            <li><a href="CV.html">CV</a></li>
-            <li><a href="contact.html" class="active">CONTACT</a></li>
-            <li><a href="contact-es.html" class="lang-btn">ESPAÑOL</a></li>
+            <li><a href="Index-es.html">INICIO</a></li>
+            <li><a href="Research-es.html">INVESTIGACIÓN</a></li>
+            <li><a href="Freelance-es.html">CONSULTORÍA</a></li>
+            <li><a href="CV-es.html">CV</a></li>
+            <li><a href="contact-es.html" class="active">CONTACTO</a></li>
+            <li><a href="contact.html" class="lang-btn">ENGLISH</a></li>
           </ul>
         </nav>
       </div>
@@ -40,34 +40,33 @@
 
       <section id="contact-box" class="contact-box" style="padding-bottom: 20px; padding-top: 0px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
-          <h2 style="margin-bottom: 30px;">Get in Touch!</h2>
+          <h2 style="margin-bottom: 30px;">¡Ponte en contacto!</h2>
           <div style="max-width: 500px; width: 100%;">
             <form method="POST" action="https://formspree.io/f/xpzelabq">
               <div style="display: flex; flex-direction: column;">
                 <div style="margin-bottom: 15px;">
-                  <label for="name" style="display: block; margin-bottom: 5px; font-size: 16px;">First Name:</label>
+                  <label for="name" style="display: block; margin-bottom: 5px; font-size: 16px;">Nombre:</label>
                   <input type="text" name="name">
                 </div>
                 <div style="margin-bottom: 15px;">
-                  <label for="lastname" style="display: block; margin-bottom: 5px; font-size: 16px;">Last Name:</label>
+                  <label for="lastname" style="display: block; margin-bottom: 5px; font-size: 16px;">Apellido:</label>
                   <input type="text" name="lastname">
                 </div>
                 <div style="margin-bottom: 15px;">
-                  <label for="email" style="display: block; margin-bottom: 5px; font-size: 16px;">Email:</label>
+                  <label for="email" style="display: block; margin-bottom: 5px; font-size: 16px;">Correo electrónico:</label>
                   <input type="email" name="_replyto">
                 </div>
                 <div style="margin-bottom: 15px;">
-                  <label for="message" style="display: block; margin-bottom: 5px; font-size: 16px;">Message:</label>
+                  <label for="message" style="display: block; margin-bottom: 5px; font-size: 16px;">Mensaje:</label>
                   <textarea name="message" id="message" style="width: 100%; height: 150px;"></textarea>
                 </div>
-                <button type="submit" class="submit-button">SUBMIT</button>
+                <button type="submit" class="submit-button">ENVIAR</button>
               </div>
             </form>
-            <div id="success-message" class="success-message">Thank you! Your message has been sent.</div>
+            <div id="success-message" class="success-message">¡Gracias! Tu mensaje ha sido enviado.</div>
           </div>
         </div>
       </section>
-      
       
       <script>
       $(document).ready(function() {
@@ -82,15 +81,14 @@
               $("#success-message").css("display", "block");
             },
             error: function() {
-              alert("Error submitting form.");
+              alert("Error al enviar el formulario.");
             }
           });
         });
       });
       </script>
-      
-      
     </main>
+
     <footer>
       <div class="footer-content">
         <p>Copyright &copy; 2025 | Dr. Luis Carlos Beltrán</p>

@@ -48,6 +48,7 @@ header {
 .navigation {
   list-style: none;
   display: flex;
+  gap: 0px;
   justify-content: flex-end;
   margin: 0;
   padding: 0;
@@ -62,8 +63,9 @@ header {
   color: #555;
   font-size: 1.2em;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 5px 5px;
   border-radius: 5px;
+
 }
 
 .navigation a:hover,
@@ -104,6 +106,7 @@ section p {
   margin: 0 auto;
   line-height: 1.5;
 }
+
 
 /* Home Section */
 .home {
